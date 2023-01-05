@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "Mark-Pro";
+    src: url(./fonts/Mark_Pro_Medium/Mark_Pro_Medium.ttf);
+}
+
+body{
+    font-family: 'Mark-Pro';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/*les sections*/
+
+.sect-1{
+    background-color: #2980B9;
+    padding: 30px;
+    height: 50vh;
+}
+.sect-2{
+    background-color: #fff;
+    padding: 20px;
+    height: 50vh;
+}
+
+
+.sect-3{   
+    background-color: #5D6D7E;
+    padding: 20px;
+    height: 50vh;
+}
+
+/*les titres*/
+
+.sect-2 h1{
+  color:#000;
+}
+
+h1{
+    text-align: center;
+    font-size: 22px;
+    color: #fff;
+}
+
+h2{
+    font-size: 17px;
+    color: #fff;
+}
+
+/*les liens*/
+
+a{  
+    text-decoration: none;
+}
+
+/*BOUTONS A EFFET REMPLISSAGE #1*/
+
+/*parent*/
+
+.btn-div_one{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 90px;
+}
+
+/*stylisation des différents boutons*/
+
+.btn-one, .btn-two, .btn-three, .btn-four{
+    color:#fff;
+    font-size:1.2em;
+    font-family:"Mark Pro", sans-serif;
+    border: 1px solid white;
+    padding: 10px 8px;
+    z-index:0;
+    position: relative;
+    overflow: hidden;
+    
+  }
+
+  /*bottom to top*/
+
+  .btn-one::before{
+    content: '';
+    background: #F9664E;
+    position:absolute;
+    top:60px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
+    transition: all .5s;
+  }
+  
+  .btn-one:hover::before{
+    top:0px;
+    border-radius: 0;
+    
+  }
+
+  /*Top to bottom*/
+  .btn-two::before
+  {
+    content: '';
+    background: #892cdc;
+    position:absolute;
+    bottom:60px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+    transition: all .5s;
+  }
+  
+  .btn-two:hover::before{
+    bottom:0px;
+    border-radius: 0;
+  }
+
+
+   /*Left to right*/
+   .btn-three::before
+   {
+     content: '';
+     background: #892cdc;
+     position:absolute;
+     top:0px;
+     left:-120px;
+     height: 100%;
+     width:100%;
+     border-radius: 0 18% 18% 0;
+     z-index: -1;
+     transition: all .5s;
+   }
+   
+   .btn-three:hover::before{
+     left:0px;
+     border-radius: 0;
+   }
+
+   /*Right to left*/
+   .btn-four::before
+   {
+     content: '';
+     background: #F9664E;
+     position:absolute;
+     top:0px;
+     left:120px;
+     height: 100%;
+     width:100%;
+     border-radius: 20% 0% 0% 20%;
+     z-index: -1;
+     transition: all .5s;
+   }
+   
+   .btn-four:hover::before{
+     left:0px;
+     border-radius: 0;
+   }
+
+  /*BOUTONS A EFFET REMPLISSAGE #2*/
+
+  .btn_fill{
+    background: none;
+    border: 2px solid #000;
+    font-family: "Mark Pro";
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 10000;
+    transition:color 0.4s linear;
+    position: relative;
+  }
+
+  .btn_fill:hover{
+    color: #fff;
+  }
+
+  .btn_fill::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0; 
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+  }
+
+  .btn_fill1::before{
+    transform: scaleX(0);
+  }
+  .btn_fill2::before{
+    transform: scaleY(0);
+  }
+  .btn_fill1:hover::before{
+    transform: scaleX(1);
+  }
+  .btn_fill2:hover::before{
+    transform: scaleY(1);
+  }
+  
+   /*BUTTONS WITH ANIMATED GRADIENT EFFECTS*/
+
+   .btn{
+    border: none;
+    padding: 24px;
+    width: 170px;
+    margin: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-family:"Mark Pro";
+    font-size: 17px;
+    background-size: 200%;
+    transition: 0.6s;
+   } 
+
+   .btn1{
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+   }
+   .btn2{
+    background-image: linear-gradient(to right, #f12711, #f5af19);
+   }
+   .btn3{
+    background-image: linear-gradient(to right, #ff416c, #ff4b2b);
+   }
+   .btn4{
+    background-image: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+   }
+
+   .btn:hover{
+    background-position: right;
+   }

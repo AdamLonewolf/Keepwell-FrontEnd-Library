@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Mark-Pro";
+    src: url(./fonts/Mark_Pro_Medium/Mark_Pro_Medium.ttf);
+}
+
+body{
+    font-family: 'Mark-Pro';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/*les sections*/
+
+.sect-1{
+    background-color: #CCEAFF;
+    padding: 30px;
+    height: 50vh;
+}
+.sect-2{
+    background-color: #F39080;
+    padding: 30px;
+    height: 50vh;
+}
+
+/*les titres*/
+
+h1{
+    text-align: center;
+    font-size: 22px;
+}
+
+h2{
+    font-size: 17px;
+}
+
+/*Marges pour séparer les barres*/
+
+hr{
+    margin: 30px 30px 0px 0px;
+}
+
+/*BARRES HORIZONTALES*/
+
+
+/*dotted*/
+.dotted{
+    border-top: 3px dotted teal;
+    border-bottom: none;
+}
+
+/*dashed*/
+.dashed{
+    border-top: 3px dashed rebeccapurple;
+    border-bottom: none;
+}
+
+/*rounded*/
+.rounded{
+    border-top: 8px solid palevioletred;
+    border-radius: 5px;
+    border-bottom: none;
+}
+
+/*style de base: solid*/
+.solid{
+    border-top: 3px solid brown ;
+    border-bottom: none;
+}
+
+/*BARRES VERTICALES*/
+
+.vertical-default{
+    border-left: 6px solid white;
+    height: 200px;
+    position: relative;
+    margin-left: -4px;
+}
+
+.vertical-dashed{
+    border-left: 6px dashed white;
+    height: 200px;
+    position: relative;
+    margin-left: -4px;
+}
+
+.vertical-dotted{
+    border-left: 6px dotted white;
+    height: 200px;
+    position: relative;
+    margin-left: -4px;
+}
+
+.vertical-rounded{
+    border-left: 6px solid white;
+    border-radius: 6px;
+    height: 200px;
+    position: relative;
+    margin-left: -4px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top:60px;
+    position: relative;
+}
