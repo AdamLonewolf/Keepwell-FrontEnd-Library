@@ -17,7 +17,6 @@
             <a href="#" class="btn-three">Left-right</a>
             <a href="#" class="btn-four">Right-left</a>
         </div> 
-        
     </section>
 
     <section class="sect-2">
@@ -30,14 +29,53 @@
     </section>
 
     <section class="sect-3">
-         <!--Button with gradient animation (effet dégradé avec animation)-->
-    <h1>Bouton à effet dégradé avec animation</h1>
-        <div class="btn-div_one"> 
-            <button class="btn btn1">Hover me</button>
-            <button class="btn btn2">Hover me</button>
-            <button class="btn btn3">Hover me</button>
-            <button class="btn btn4">Hover me</button>
-        </div>     
+        <!--Button with gradient animation (effet dégradé avec animation)-->
+   <h1>Bouton à effet dégradé avec animation</h1>
+       <div class="btn-div_one"> 
+           <button class="btn btn1">Hover me</button>
+           <button class="btn btn2">Hover me</button>
+           <button class="btn btn3">Hover me</button>
+           <button class="btn btn4">Hover me</button>
+       </div>     
+   </section>
+
+   <section class="sect-4">
+    <!--Button with amazing effects (effet dégradé avec animation)-->
+<h1>Boutons avec effets avancés</h1>
+   <div class="btn-div_one"> 
+       <a href="#" class="diff-btn diff-btn1">Click me</a>
+       <a href="#" class="diff-btn diff-btn2">Click me</a>
+       <a href="#" class="diff-btn diff-btn3">Click me</a>
+   </div>     
+</section>
+
+   <section class="sect-5">
+    <!--Button with amazing effects (effet dégradé avec animation) (PS: Code Javascript à récupérer en bas)-->
+<h1>Bouton Hamburger menu animé</h1>
+    <div class="btn-div_one"> 
+        <div class="menu-btn">
+            <div class="menu-btn_hamburger"></div>
+        </div>
+    </div>
     </section>
 </body>
+
+<script>
+
+    //Button Hamburger
+
+    const menuBtn = document.querySelector('.menu-btn');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+        if(!menuOpen){
+            menuBtn.classList.add('open');
+            menuOpen=true;
+        }else{
+            menuBtn.classList.remove('open');
+            menuOpen=false;
+        }
+    })
+
+</script>
+
 </html>

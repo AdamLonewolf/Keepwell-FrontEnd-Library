@@ -15,24 +15,31 @@ body{
 .sect-1{
     background-color: #2980B9;
     padding: 30px;
-    height: 50vh;
 }
 .sect-2{
     background-color: #fff;
     padding: 20px;
-    height: 50vh;
 }
 
 
 .sect-3{   
     background-color: #5D6D7E;
     padding: 20px;
-    height: 50vh;
 }
 
+.sect-4{
+  background-color: #fff;
+  padding: 20px;
+}
+
+.sect-5{
+  background-color: #161616;
+  padding: 20px;
+
+}
 /*les titres*/
 
-.sect-2 h1{
+.sect-2, .sect-4 h1{
   color:#000;
 }
 
@@ -53,7 +60,7 @@ a{
     text-decoration: none;
 }
 
-/*BOUTONS A EFFET REMPLISSAGE #1*/
+/*---------------BOUTONS A EFFET REMPLISSAGE #1---------------*/
 
 /*parent*/
 
@@ -61,8 +68,7 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: relative;
-    top: 90px;
+    padding: 50px 0px;
 }
 
 /*stylisation des différents boutons*/
@@ -76,7 +82,6 @@ a{
     z-index:0;
     position: relative;
     overflow: hidden;
-    
   }
 
   /*bottom to top*/
@@ -161,7 +166,7 @@ a{
      border-radius: 0;
    }
 
-  /*BOUTONS A EFFET REMPLISSAGE #2*/
+  /*-----------BOUTONS A EFFET REMPLISSAGE #2-------------*/
 
   .btn_fill{
     background: none;
@@ -209,7 +214,7 @@ a{
     transform: scaleY(1);
   }
   
-   /*BUTTONS WITH ANIMATED GRADIENT EFFECTS*/
+   /*BOUTONS AVEC EFFET DEGRADE*/
 
    .btn{
     border: none;
@@ -241,3 +246,156 @@ a{
    .btn:hover{
     background-position: right;
    }
+
+
+   /*----------BOUTON AVEC EFFETS AVANCES---------*/
+
+   .diff-btn{
+    padding: 20px 50px;
+    font-size:1.25rem;
+    position: relative;
+   }
+
+
+   /*Bouton 1*/
+
+   .diff-btn1{
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+   }
+
+   .diff-btn1::after, .diff-btn1::before{
+    content: "";
+    position: absolute;
+    opacity: 0.3;
+    background: #000;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom:0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+   }
+
+   .diff-btn1:hover{
+    transform: translate(-12px, -12px);
+   }
+
+   .diff-btn1:hover::after{
+    transform: translate(6px, 6px);
+   }
+   .diff-btn1:hover::before{
+    transform: translate(12px, 12px);
+   }
+
+
+    /*Bouton 2*/
+
+    .diff-btn2{
+      color:#000;
+    }
+
+    .diff-btn2::after, .diff-btn2::before{
+      border: 3px solid #000;
+      content: "";
+      position: absolute;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
+      left: 0;
+      bottom: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .diff-btn2:hover::after{
+      transform: translate(-5px, -5px);
+    }
+    .diff-btn2:hover::before{
+      transform: translate(5px, 5px);
+    }
+
+    /*bouton 3*/
+
+    .diff-btn3{
+      overflow: hidden;
+      color: #fff;
+      z-index: 1;
+      border-radius:30px;
+      box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200 , 255, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .diff-btn3::after{
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      top: -50px;
+      left: -100px;
+      background-color: #ff3cac;
+      background-image: linear-gradient(225deg,#27d86c 0%, #26caf8 50%, #c625d0 100%);
+      transition: transform 0.5s ease;
+      z-index: -1;
+    }
+
+    .diff-btn3:hover{
+      transform: translate(0, -6px);
+      box-shadow:10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200 , 255, 0.5);
+    }
+
+    /*-----BOUTON HAMBURGER MENU ANIME-------*/
+
+    .menu-btn{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+      border: 3px solid #fff;
+    }
+
+    .menu-btn_hamburger{
+      width: 50px;
+      height: 6px;
+      background:#fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+      transition: all .5s ease-in-out;
+    }
+
+    .menu-btn_hamburger::before,
+    .menu-btn_hamburger::after{
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 6px;
+      background: #FFF;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+      transition: all .5s ease-in-out;
+    }
+
+    .menu-btn_hamburger::before{
+      transform: translateY(-16px);
+    }
+    .menu-btn_hamburger::after{
+      transform: translateY(16px);
+    }
+
+    .menu-btn.open .menu-btn_hamburger{
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .menu-btn.open .menu-btn_hamburger::before{
+      transform: rotate(45deg) translate(35px, -35px);
+    }
+    .menu-btn.open .menu-btn_hamburger::after{
+      transform: rotate(-45deg) translate(35px, 35px);
+    }
