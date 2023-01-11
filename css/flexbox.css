@@ -1,0 +1,122 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+.result{
+    opacity: 0;
+    transition: all 0.5ms ease-out;
+}
+.CopyText{
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.square{
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+}
+.square-wrapper{
+    background-color: rgb(0, 255, 251);
+    min-height: 200px;
+}
+
+/* -------------------------------------------------------------------- */
+/* les classe flex */
+
+/* row center */
+
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexSpaceAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexSpaceEvenly{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flexLeft{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.flexRight{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.flexAlignStart{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flexAlignEnd{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* column */
+
+.flexColumnCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexColumnSpaceAround{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexColumnSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexColumnSpaceEvenly{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexColumnStart{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexColumnEnd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
